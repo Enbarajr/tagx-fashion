@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | TagX Fashion</title>
+  <meta name="description" content="View product details, choose size and quantity, add to cart or order instantly via WhatsApp on TagX Fashion.">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/analytics.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>🔥 FREE Delivery on Orders Over ₹499 | Direct WhatsApp Instant Order</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-wrapper">
+    <div class="container navbar">
+      <button class="icon-btn" onclick="toggleMobileDrawer()" title="Menu">
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="TagX Logo" class="brand-logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="how-to-order.html" class="nav-link">How To Order</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="whatsapp-groups.html" class="nav-link" style="color: var(--whatsapp-color);">💬 VIP Groups</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" onclick="toggleSearchModal()" title="Search Products">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </button>
+
+        <a href="wishlist.html" class="icon-btn" title="Wishlist">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          <span class="icon-badge wishlist-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="cart.html" class="icon-btn" title="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span class="icon-badge cart-badge" style="display: none;">0</span>
+        </a>
+
+        <button class="icon-btn theme-toggle-btn" onclick="toggleTheme()"></button>
+      </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal">
+      <div class="container">
+        <div class="search-box-input">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input type="text" id="search-input-header" placeholder="Search products..." />
+          <button onclick="toggleSearchModal()" style="font-weight: 700;">&times;</button>
+        </div>
+        <div id="search-results-header" class="search-results-dropdown"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay" onclick="toggleMobileDrawer()"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <img src="assets/logo.png" alt="TagX Logo" style="height: 36px;">
+      <button onclick="toggleMobileDrawer()" style="font-size: 1.5rem;">&times;</button>
+    </div>
+    <nav class="drawer-menu">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="collections.html" class="drawer-link">Collections</a>
+      <a href="how-to-order.html" class="drawer-link">How To Order</a>
+      <a href="faq.html" class="drawer-link">FAQ</a>
+      <a href="support.html" class="drawer-link">Support</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+      <a href="whatsapp-groups.html" class="drawer-link" style="color: var(--whatsapp-color);">💬 Join VIP WhatsApp</a>
+    </nav>
+  </aside>
+
+  <!-- Main Product Detail View -->
+  <main class="container section-padding">
+
+    <!-- Breadcrumb -->
+    <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+      <a href="index.html">Home</a> / <a href="collections.html">Collections</a> / <span id="breadcrumb-product-title" style="color: var(--text-main); font-weight: 700;">DNMX T-Shirt</span>
+    </div>
+
+    <!-- Product Layout -->
+    <div class="product-detail-layout">
+
+      <!-- Product Image Gallery -->
+      <div>
+        <div style="position: relative; width: 100%; aspect-ratio: 3/4; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-subtle); border: 1px solid var(--border); margin-bottom: 1rem;">
+          <img id="main-product-img" src="" alt="Product Image" style="width: 100%; height: 100%; object-fit: cover;" />
+          <span id="product-badge-tag" class="badge"></span>
+          <button id="p-wishlist-btn" class="wishlist-btn" onclick="" style="top: 15px; right: 15px; width: 42px; height: 42px;">
+            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </button>
+        </div>
+
+        <!-- 4 Image Thumbnails -->
+        <div id="thumbnails-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;"></div>
+      </div>
+
+      <!-- Product Details Info Column -->
+      <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+
+        <div>
+          <div class="flex-between" style="margin-bottom: 6px;">
+            <span id="p-brand" style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--text-subtle);">BRAND</span>
+            <span id="p-stock-badge" class="stock-badge"></span>
+          </div>
+
+          <h1 id="p-title" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 8px;">DNMX T-Shirt</h1>
+
+          <!-- Price Row -->
+          <div style="display: flex; align-items: baseline; gap: 12px; margin-block: 8px;">
+            <span id="p-price" style="font-size: 2rem; font-weight: 900; color: var(--primary);">₹199</span>
+            <span id="p-original-price" style="font-size: 1.2rem; color: var(--text-subtle); text-decoration: line-through;">₹499</span>
+            <span id="p-discount" class="discount-tag" style="font-size: 0.95rem;">60% OFF</span>
+          </div>
+
+          <p id="p-description" style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.6;">
+            High quality street fashion product...
+          </p>
+        </div>
+
+        <hr style="border: none; border-top: 1px solid var(--border);" />
+
+        <!-- Size Picker -->
+        <div>
+          <div class="flex-between" style="margin-bottom: 10px;">
+            <label class="form-label">Select Size:</label>
+            <span style="font-size: 0.8rem; color: var(--primary); font-weight: 700; cursor: pointer;">Size Guide</span>
+          </div>
+
+          <div id="sizes-picker-container" class="size-picker"></div>
+        </div>
+
+        <!-- Quantity Stepper -->
+        <div>
+          <label class="form-label" style="margin-bottom: 8px; display: block;">Quantity:</label>
+          <div class="qty-stepper">
+            <button class="qty-btn" onclick="changeQty(-1)">-</button>
+            <input type="text" id="qty-input" class="qty-input" value="1" readonly />
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px;">
+          <button id="add-to-cart-btn" class="btn btn-outline btn-lg btn-full">
+            🛒 Add To Cart
+          </button>
+          
+          <button id="order-whatsapp-btn" class="btn btn-whatsapp btn-lg btn-full">
+            💬 Order Via WhatsApp (Instant Quick Checkout)
+          </button>
+        </div>
+
+        <!-- Share Buttons -->
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 8px; font-size: 0.9rem; color: var(--text-muted);">
+          <span style="font-weight: 700;">Share:</span>
+          <button onclick="shareOnWhatsApp()" class="btn btn-sm btn-secondary">WhatsApp</button>
+          <button onclick="copyProductLink()" class="btn btn-sm btn-secondary">Copy Link</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Related Products Section -->
+    <section class="section-padding" style="margin-top: 2rem; border-top: 1px solid var(--border);">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; margin-bottom: 1.5rem;">You Might Also Like</h2>
+      <div id="related-products-grid" class="products-grid"></div>
+    </section>
+
+    <!-- Recently Viewed Section -->
+    <section class="section-padding" style="border-top: 1px dashed var(--border);">
+      <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; margin-bottom: 1.5rem;">Recently Viewed</h2>
+      <div id="recently-viewed-grid" class="products-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- Mobile Bottom Sticky Bar -->
+  <nav class="mobile-bottom-nav">
+    <a href="index.html" class="bottom-nav-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+      <span>Home</span>
+    </a>
+    <a href="collections.html" class="bottom-nav-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+      <span>Shop</span>
+    </a>
+    <a href="wishlist.html" class="bottom-nav-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+      <span>Wishlist</span>
+    </a>
+    <a href="cart.html" class="bottom-nav-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+      <span>Cart</span>
+    </a>
+  </nav>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-surface); border-top: 1px solid var(--border); padding-top: 3rem; padding-bottom: 2rem; margin-top: 4rem;">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="TagX Logo" style="height: 38px; margin-bottom: 12px;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          TagX Fashion - Instant WhatsApp order & UPI payment platform.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem;">Links</h4>
+        <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--text-muted);">
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="how-to-order.html">How to Order</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem;">Socials</h4>
+        <ul style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--text-muted);">
+          <li><a href="https://www.instagram.com/tagx_fashion?igsi=bWE5MnVlbHd3dTdl" target="_blank">Instagram (@tagx_fashion)</a></li>
+          <li><a href="whatsapp-groups.html">Join VIP Group</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem;">UPI Payments</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Pay securely via GPay, PhonePe & Paytm</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    let selectedSize = 'XL';
+    let currentQty = 1;
+    let currentProduct = null;
+
+    function changeQty(delta) {
+      currentQty = Math.max(1, currentQty + delta);
+      document.getElementById('qty-input').value = currentQty;
+    }
+
+    function selectSize(size) {
+      selectedSize = size;
+      document.querySelectorAll('.size-pill').forEach(pill => {
+        if (pill.getAttribute('data-size') === size) {
+          pill.classList.add('selected');
+        } else {
+          pill.classList.remove('selected');
+        }
+      });
+    }
+
+    function saveRecentlyViewed(productId) {
+      let rv = JSON.parse(localStorage.getItem('tagx_recently_viewed')) || [];
+      rv = rv.filter(id => id !== productId);
+      rv.unshift(productId);
+      if (rv.length > 4) rv.pop();
+      localStorage.setItem('tagx_recently_viewed', JSON.stringify(rv));
+    }
+
+    function shareOnWhatsApp() {
+      const url = `https://wa.me/?text=${encodeURIComponent('Check out ' + currentProduct.title + ' on TagX Fashion: ' + window.location.href)}`;
+      window.open(url, '_blank');
+    }
+
+    function copyProductLink() {
+      navigator.clipboard.writeText(window.location.href);
+      showToast('Product link copied to clipboard!');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id') || 'tagx-dnmx-01';
+
+      currentProduct = getProductById(productId);
+      saveRecentlyViewed(productId);
+
+      // Populate Text & Details
+      document.getElementById('breadcrumb-product-title').textContent = currentProduct.title;
+      document.getElementById('p-brand').textContent = currentProduct.brand;
+      document.getElementById('p-title').textContent = currentProduct.title;
+      document.getElementById('p-price').textContent = `₹${currentProduct.price}`;
+      document.getElementById('p-original-price').textContent = `₹${currentProduct.originalPrice}`;
+      document.getElementById('p-discount').textContent = currentProduct.discount;
+      document.getElementById('p-description').textContent = currentProduct.description;
+
+      // Badges
+      const badgeTag = document.getElementById('product-badge-tag');
+      badgeTag.textContent = currentProduct.tag;
+      badgeTag.className = `badge ${currentProduct.badgeClass}`;
+
+      const stockBadge = document.getElementById('p-stock-badge');
+      stockBadge.textContent = `🔥 ${currentProduct.stockTag}`;
+      stockBadge.className = `stock-badge ${currentProduct.stock <= 3 ? 'low' : 'fast'}`;
+
+      // Images & Thumbnails
+      const mainImg = document.getElementById('main-product-img');
+      mainImg.src = currentProduct.image;
+
+      const thumbContainer = document.getElementById('thumbnails-container');
+      const thumbs = currentProduct.thumbnails || [currentProduct.image];
+      thumbContainer.innerHTML = thumbs.map((src, index) => `
+        <img src="${src}" onclick="document.getElementById('main-product-img').src='${src}'" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); border: 1.5px solid var(--border); cursor: pointer;" />
+      `).join('');
+
+      // Size Selector
+      const sizesContainer = document.getElementById('sizes-picker-container');
+      sizesContainer.innerHTML = currentProduct.sizes.map((s, index) => {
+        if (index === 0) selectedSize = s;
+        return `<button class="size-pill ${index === 0 ? 'selected' : ''}" data-size="${s}" onclick="selectSize('${s}')">${s}</button>`;
+      }).join('');
+
+      // Wishlist Button Action
+      const pWishlistBtn = document.getElementById('p-wishlist-btn');
+      pWishlistBtn.setAttribute('data-id', currentProduct.id);
+      pWishlistBtn.onclick = () => toggleWishlist(currentProduct.id);
+      if (isInWishlist(currentProduct.id)) {
+        pWishlistBtn.classList.add('active');
+        pWishlistBtn.innerHTML = `<svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`;
+      }
+
+      // Add to Cart Action
+      document.getElementById('add-to-cart-btn').onclick = () => {
+        addToCart(currentProduct.id, selectedSize, currentQty);
+      };
+
+      // Order via WhatsApp Instant Action
+      document.getElementById('order-whatsapp-btn').onclick = () => {
+        processDirectWhatsAppOrder(currentProduct.id, selectedSize, currentQty);
+      };
+
+      // Render Related Products
+      const related = PRODUCTS_DATA.filter(p => p.id !== currentProduct.id).slice(0, 3);
+      renderProductsGrid(document.getElementById('related-products-grid'), related);
+
+      // Render Recently Viewed
+      const rvIds = JSON.parse(localStorage.getItem('tagx_recently_viewed')) || [];
+      const rvProducts = rvIds.map(id => getProductById(id)).filter(p => p && p.id !== currentProduct.id).slice(0, 3);
+      renderProductsGrid(document.getElementById('recently-viewed-grid'), rvProducts.length > 0 ? rvProducts : related);
+    });
+  </script>
+</body>
+</html>

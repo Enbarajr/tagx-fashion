@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions | TagX Fashion</title>
+  <meta name="description" content="Answers to common questions about TagX Fashion orders, UPI payments, delivery times, return policies, and size replacements.">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>🔥 FREE Delivery on Orders Over ₹499 | Direct WhatsApp Instant Order</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-wrapper">
+    <div class="container navbar">
+      <button class="icon-btn" onclick="toggleMobileDrawer()" title="Menu">
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="TagX Logo" class="brand-logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="how-to-order.html" class="nav-link">How To Order</a>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="whatsapp-groups.html" class="nav-link" style="color: var(--whatsapp-color);">💬 VIP Groups</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" onclick="toggleSearchModal()" title="Search Products">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </button>
+
+        <a href="wishlist.html" class="icon-btn" title="Wishlist">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          <span class="icon-badge wishlist-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="cart.html" class="icon-btn" title="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span class="icon-badge cart-badge" style="display: none;">0</span>
+        </a>
+
+        <button class="icon-btn theme-toggle-btn" onclick="toggleTheme()"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay" onclick="toggleMobileDrawer()"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <img src="assets/logo.png" alt="TagX Logo" style="height: 36px;">
+      <button onclick="toggleMobileDrawer()" style="font-size: 1.5rem;">&times;</button>
+    </div>
+    <nav class="drawer-menu">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="collections.html" class="drawer-link">Collections</a>
+      <a href="faq.html" class="drawer-link active">FAQ</a>
+      <a href="support.html" class="drawer-link">Support</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- FAQ Accordion UI -->
+  <main class="container section-padding" style="max-width: 860px;">
+
+    <div class="text-center" style="margin-bottom: 2.5rem;">
+      <span style="color: var(--primary); font-weight: 800; text-transform: uppercase;">Help Center</span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.3rem; font-weight: 900; margin-top: 4px;">Frequently Asked Questions</h1>
+    </div>
+
+    <div class="accordion">
+
+      <!-- Q1 -->
+      <div class="accordion-item active">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>❓ How to order on TagX Fashion?</span>
+          <span>▼</span>
+        </div>
+        <div class="accordion-content">
+          Browse our collections, choose your size and quantity, and click <strong>Add To Cart</strong> or <strong>Order via WhatsApp</strong>. Fill in your delivery details on the checkout page, and click <strong>Place Order</strong>. This opens WhatsApp with your pre-formatted order details ready to send.
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>❓ How to pay for my order?</span>
+          <span>▼</span>
+        </div>
+        <div class="accordion-content">
+          Once you send your WhatsApp order, our TagX team confirms stock availability and sends you our official UPI QR code / PhonePe / Google Pay / Paytm details. Pay using any UPI app and send a screenshot of the payment receipt!
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>❓ What is the delivery time?</span>
+          <span>▼</span>
+        </div>
+        <div class="accordion-content">
+          Orders are packed and dispatched within 24 hours of payment confirmation. Delivery usually takes 2 to 4 business days depending on your location across India. Live tracking links are shared directly on your WhatsApp.
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>❓ What is your return policy?</span>
+          <span>▼</span>
+        </div>
+        <div class="accordion-content">
+          We accept returns or exchanges within 7 days of delivery for unused items with original tags intact. Simply message our WhatsApp support team to arrange an exchange or return.
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <span>❓ What if I face a size issue?</span>
+          <span>▼</span>
+        </div>
+        <div class="accordion-content">
+          Don't worry! We offer free size replacements. If your shirt or jeans feel too tight or loose, message us on WhatsApp with your order ID, and we will swap it for your preferred size.
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    function toggleAccordion(headerEl) {
+      const item = headerEl.parentElement;
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+    }
+  </script>
+</body>
+</html>

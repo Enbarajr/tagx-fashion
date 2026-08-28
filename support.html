@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Support | TagX Fashion</title>
+  <meta name="description" content="Get fast 24/7 customer support via WhatsApp (+91 63808 16529), phone call, or Instagram DM (@tagx_fashion) on TagX Fashion.">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>🔥 FREE Delivery on Orders Over ₹499 | Direct WhatsApp Instant Order (+91 63808 16529)</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-wrapper">
+    <div class="container navbar">
+      <button class="icon-btn" onclick="toggleMobileDrawer()" title="Menu">
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="TagX Logo" class="brand-logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="how-to-order.html" class="nav-link">How To Order</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="support.html" class="nav-link active">Support</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="whatsapp-groups.html" class="nav-link" style="color: var(--whatsapp-color);">💬 VIP Groups</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" onclick="toggleSearchModal()" title="Search Products">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </button>
+
+        <a href="wishlist.html" class="icon-btn" title="Wishlist">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          <span class="icon-badge wishlist-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="cart.html" class="icon-btn" title="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span class="icon-badge cart-badge" style="display: none;">0</span>
+        </a>
+
+        <button class="icon-btn theme-toggle-btn" onclick="toggleTheme()"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay" onclick="toggleMobileDrawer()"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <img src="assets/logo.png" alt="TagX Logo" style="height: 36px;">
+      <button onclick="toggleMobileDrawer()" style="font-size: 1.5rem;">&times;</button>
+    </div>
+    <nav class="drawer-menu">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="collections.html" class="drawer-link">Collections</a>
+      <a href="support.html" class="drawer-link active">Support</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Support Page Main Content -->
+  <main class="container section-padding" style="max-width: 800px;">
+
+    <div class="text-center" style="margin-bottom: 3rem;">
+      <span style="color: var(--primary); font-weight: 800; text-transform: uppercase;">24/7 Assistance</span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; margin-top: 4px;">TagX Customer Support</h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">Need help with your order, tracking, or size exchange? Connect with us directly!</p>
+    </div>
+
+    <!-- Action Buttons Grid -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+      <a href="https://wa.me/916380816529" target="_blank" style="background: var(--bg-card); border: 2px solid var(--whatsapp-color); padding: 1.8rem; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; transition: transform var(--transition-fast);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="font-size: 2.5rem;">💬</div>
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-main);">WhatsApp Support</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Instant responses on +91 63808 16529 for order confirmation & tracking.</p>
+          </div>
+        </div>
+        <span class="btn btn-whatsapp">Chat Now &rarr;</span>
+      </a>
+
+      <a href="tel:+916380816529" style="background: var(--bg-card); border: 2px solid var(--primary); padding: 1.8rem; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; transition: transform var(--transition-fast);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="font-size: 2.5rem;">📞</div>
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-main);">Call Us Directly</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Available Monday to Saturday (9:00 AM - 9:00 PM IST).</p>
+          </div>
+        </div>
+        <span class="btn btn-primary">Call +91 63808 16529</span>
+      </a>
+
+      <a href="https://www.instagram.com/tagx_fashion?igsi=bWE5MnVlbHd3dTdl" target="_blank" style="background: var(--bg-card); border: 2px solid var(--instagram-color); padding: 1.8rem; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; transition: transform var(--transition-fast);">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="font-size: 2.5rem;">📸</div>
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-main);">Instagram DM</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Send us a DM on @tagx_fashion for quick fashion advice & drops.</p>
+          </div>
+        </div>
+        <span class="btn btn-outline" style="border-color: var(--instagram-color); color: var(--instagram-color);">Open DM &rarr;</span>
+      </a>
+
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

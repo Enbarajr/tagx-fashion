@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | TagX Fashion</title>
+  <meta name="description" content="Contact TagX Fashion team via Instagram (@tagx_fashion), WhatsApp (+91 63808 16529), Email (tagxfashion@gmail.com) or visit our location.">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>🔥 FREE Delivery on Orders Over ₹499 | Direct WhatsApp Instant Order (+91 63808 16529)</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header-wrapper">
+    <div class="container navbar">
+      <button class="icon-btn" onclick="toggleMobileDrawer()" title="Menu">
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" alt="TagX Logo" class="brand-logo">
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="how-to-order.html" class="nav-link">How To Order</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="whatsapp-groups.html" class="nav-link" style="color: var(--whatsapp-color);">💬 VIP Groups</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" onclick="toggleSearchModal()" title="Search Products">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </button>
+
+        <a href="wishlist.html" class="icon-btn" title="Wishlist">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          <span class="icon-badge wishlist-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="cart.html" class="icon-btn" title="Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span class="icon-badge cart-badge" style="display: none;">0</span>
+        </a>
+
+        <button class="icon-btn theme-toggle-btn" onclick="toggleTheme()"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay" onclick="toggleMobileDrawer()"></div>
+  <aside id="mobile-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <img src="assets/logo.png" alt="TagX Logo" style="height: 36px;">
+      <button onclick="toggleMobileDrawer()" style="font-size: 1.5rem;">&times;</button>
+    </div>
+    <nav class="drawer-menu">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="collections.html" class="drawer-link">Collections</a>
+      <a href="contact.html" class="drawer-link active">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Contact Main Content -->
+  <main class="container section-padding">
+
+    <div class="text-center" style="max-width: 700px; margin-inline: auto; margin-bottom: 3rem;">
+      <span style="color: var(--primary); font-weight: 800; text-transform: uppercase;">Get In Touch</span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; margin-top: 4px;">Contact TagX Store</h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">We would love to hear from you. Connect with us across our official social channels or visit our store.</p>
+    </div>
+
+    <!-- Contact Info Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.8rem; border-radius: var(--radius-lg); text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 8px;">💬</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">WhatsApp</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-block: 6px;">+91 63808 16529</p>
+        <a href="https://wa.me/916380816529" target="_blank" style="color: var(--whatsapp-color); font-weight: 700; font-size: 0.9rem;">Chat on WhatsApp &rarr;</a>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.8rem; border-radius: var(--radius-lg); text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 8px;">📸</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">Instagram</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-block: 6px;">@tagx_fashion</p>
+        <a href="https://www.instagram.com/tagx_fashion?igsi=bWE5MnVlbHd3dTdl" target="_blank" style="color: var(--instagram-color); font-weight: 700; font-size: 0.9rem;">Follow & DM &rarr;</a>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.8rem; border-radius: var(--radius-lg); text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 8px;">📧</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">Email</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-block: 6px;">tagxfashion@gmail.com</p>
+        <a href="mailto:tagxfashion@gmail.com" style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Send Email &rarr;</a>
+      </div>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.8rem; border-radius: var(--radius-lg); text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 8px;">📍</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">Location</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-block: 6px;">Main Street, Fashion District, Chennai, TN</p>
+        <span style="color: var(--text-subtle); font-weight: 700; font-size: 0.9rem;">Open Daily 10 AM - 9 PM</span>
+      </div>
+
+    </div>
+
+    <!-- Official Instagram QR Code Card Section -->
+    <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 3rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
+      <h3 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800;">Scan Official Instagram QR Code</h3>
+      <p style="color: var(--text-muted); max-width: 500px;">Scan using your Instagram app or camera to connect with @tagx_fashion instantly!</p>
+      <img src="assets/instagram-qr.png" alt="TagX Fashion Instagram QR Code" style="max-width: 240px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 2px solid var(--border);">
+    </div>
+
+    <!-- Google Maps Embed -->
+    <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-md);">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5861962366114!2d80.23018861482296!3d13.061386790796914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526670868f0001%3A0x868b209d0124df0!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+        width="100%" 
+        height="380" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
