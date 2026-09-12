@@ -1,21 +1,56 @@
 /* TagX Fashion - Mobile First Navigation & Header Styles */
 
-/* Announcement Top Bar */
+/* Announcement Top Bar - Continuous Running News Ticker */
 .announcement-bar {
   background: var(--primary);
   color: #FFFFFF;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  text-align: center;
-  padding: 6px 12px;
+  padding: 6px 0;
   letter-spacing: 0.4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
   overflow: hidden;
+  position: relative;
+  display: flex;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.announcement-bar-track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: announcementTicker 24s linear infinite;
+  will-change: transform;
+}
+
+.announcement-bar-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 2.5rem;
+  flex-shrink: 0;
+}
+
+.announcement-bar:hover .announcement-bar-track {
+  animation-play-state: paused;
+}
+
+/* Fallback for single span without track on small screens */
+.announcement-bar > span:only-child {
+  display: inline-block;
+  animation: singleSpanTicker 16s linear infinite;
+  will-change: transform;
+  padding-left: 100%;
+}
+
+@keyframes announcementTicker {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes singleSpanTicker {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Header & Sticky Nav */

@@ -2,131 +2,1227 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Support | TagX Fashion</title>
-  <meta name="description" content="Get fast 24/7 customer support via WhatsApp (+91 63808 16529), phone call, or Instagram DM (@tagx_fashion) on TagX Fashion.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Contact for Order & Other Queries | TagX Fashion</title>
+  <meta name="description" content="Contact TagX Fashion for order booking, live tracking, size exchange, payment verification, and streetwear inquiries via WhatsApp (+91 63808 16529), call, or Instagram DM.">
 
+  <!-- OpenGraph Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact for Order & Other Queries | TagX Fashion">
+  <meta property="og:description" content="Direct 24/7 assistance for order tracking, size exchange, UPI confirmation, and all streetwear queries.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Core CSS -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* ==========================================================
+       TAGX CONTACT & ORDER DESK - PREMIUM MOBILE UI
+       ========================================================== */
+
+    /* 1. CINEMATIC 2.5-SECOND INTRO SPLASH OVERLAY */
+    #support-splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      background: radial-gradient(circle at center, #1a1a24 0%, #0d0d12 60%, #050507 100%);
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      overflow: hidden;
+      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+    }
+
+    #support-splash-screen.hidden {
+      opacity: 0;
+      transform: scale(1.06);
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .splash-cyber-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(229, 9, 20, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(229, 9, 20, 0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+      pointer-events: none;
+      animation: gridPulse 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes gridPulse {
+      0% { opacity: 0.4; transform: scale(1); }
+      100% { opacity: 0.9; transform: scale(1.03); }
+    }
+
+    .splash-radar-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .splash-radar-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px solid rgba(229, 9, 20, 0.35);
+      box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
+      animation: radarSpin 3s linear infinite;
+    }
+
+    .splash-radar-ring::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      background: #E50914;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #FF3344, 0 0 24px #E50914;
+    }
+
+    .splash-radar-pulse {
+      position: absolute;
+      inset: -15px;
+      border-radius: 50%;
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      animation: radarExpand 1.8s ease-out infinite;
+    }
+
+    @keyframes radarSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes radarExpand {
+      0% { transform: scale(0.8); opacity: 1; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    .splash-logo-core {
+      width: 64px;
+      height: 64px;
+      background: #111116;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), inset 0 0 12px rgba(229, 9, 20, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .splash-logo-core img {
+      width: 42px;
+      height: auto;
+      filter: drop-shadow(0 2px 8px rgba(229, 9, 20, 0.5));
+    }
+
+    .splash-soundwaves {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      height: 22px;
+      margin-bottom: 0.9rem;
+    }
+
+    .soundwave-bar {
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to top, #25D366, #E50914);
+      border-radius: 3px;
+      animation: soundwaveBounce 0.8s ease-in-out infinite alternate;
+    }
+
+    .soundwave-bar:nth-child(1) { animation-delay: 0.1s; height: 35%; }
+    .soundwave-bar:nth-child(2) { animation-delay: 0.3s; height: 70%; }
+    .soundwave-bar:nth-child(3) { animation-delay: 0.2s; height: 100%; }
+    .soundwave-bar:nth-child(4) { animation-delay: 0.4s; height: 60%; }
+    .soundwave-bar:nth-child(5) { animation-delay: 0.15s; height: 85%; }
+    .soundwave-bar:nth-child(6) { animation-delay: 0.35s; height: 40%; }
+
+    @keyframes soundwaveBounce {
+      0% { transform: scaleY(0.3); }
+      100% { transform: scaleY(1); }
+    }
+
+    .splash-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      text-align: center;
+      background: linear-gradient(90deg, #FFFFFF, #E50914, #FFFFFF);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shineText 2s linear infinite;
+    }
+
+    @keyframes shineText {
+      to { background-position: 200% center; }
+    }
+
+    .splash-status-text {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: #94A3B8;
+      margin-bottom: 1.4rem;
+      text-align: center;
+      min-height: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    .splash-progress-track {
+      width: min(260px, 78vw);
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 99px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .splash-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #E50914, #25D366);
+      border-radius: 99px;
+      transition: width 0.05s linear;
+      box-shadow: 0 0 10px rgba(37, 211, 102, 0.8);
+    }
+
+    .splash-skip-btn {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #CBD5E1;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .splash-skip-btn:hover, .splash-skip-btn:active {
+      background: rgba(229, 9, 20, 0.3);
+      color: #FFFFFF;
+      border-color: #E50914;
+    }
+
+    /* 2. SUPPORT PAGE MAIN HERO & CARDS */
+    .support-hero {
+      position: relative;
+      padding: 2rem 1rem 1.6rem;
+      text-align: center;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-main) 100%);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.6rem;
+      overflow: hidden;
+    }
+
+    .support-hero::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      height: 120px;
+      background: radial-gradient(ellipse, var(--primary-glow) 0%, transparent 70%);
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .live-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      border-radius: 9999px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      color: var(--whatsapp-color);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .live-status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--whatsapp-color);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--whatsapp-color);
+      animation: liveBlink 1.4s infinite alternate;
+    }
+
+    @keyframes liveBlink {
+      0% { transform: scale(0.85); opacity: 0.6; }
+      100% { transform: scale(1.25); opacity: 1; box-shadow: 0 0 12px var(--whatsapp-color); }
+    }
+
+    .support-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .support-hero-subtitle {
+      color: var(--text-muted);
+      font-size: clamp(0.88rem, 2.5vw, 1rem);
+      max-width: 580px;
+      margin-inline: auto;
+      line-height: 1.5;
+    }
+
+    /* Quick Action Chips Bar */
+    .quick-chips-section {
+      margin-bottom: 1.8rem;
+    }
+
+    .chips-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-subtle);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quick-chips-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .quick-chips-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .topic-chip {
+      white-space: nowrap;
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .topic-chip:hover, .topic-chip:active {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--primary-glow);
+    }
+
+    /* Support Channels Grid */
+    .support-channels-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .support-card {
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .support-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 1.8rem;
+      }
+    }
+
+    .support-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-whatsapp {
+      border-color: rgba(37, 211, 102, 0.4);
+      background: linear-gradient(135deg, var(--bg-surface) 80%, rgba(37, 211, 102, 0.05) 100%);
+    }
+
+    .card-whatsapp:hover {
+      border-color: var(--whatsapp-color);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.2);
+    }
+
+    .card-phone {
+      border-color: rgba(229, 9, 20, 0.35);
+      background: linear-gradient(135deg, var(--bg-surface) 80%, rgba(229, 9, 20, 0.04) 100%);
+    }
+
+    .card-phone:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-primary);
+    }
+
+    .card-instagram {
+      border-color: rgba(225, 48, 108, 0.35);
+      background: linear-gradient(135deg, var(--bg-surface) 80%, rgba(225, 48, 108, 0.04) 100%);
+    }
+
+    .card-instagram:hover {
+      border-color: var(--instagram-color);
+      box-shadow: 0 8px 24px rgba(225, 48, 108, 0.2);
+    }
+
+    .card-email {
+      border-color: var(--border);
+    }
+
+    .card-email:hover {
+      border-color: var(--text-subtle);
+    }
+
+    .card-left-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .channel-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      flex-shrink: 0;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+    }
+
+    .channel-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .channel-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .channel-badge {
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .badge-fast {
+      background: rgba(37, 211, 102, 0.15);
+      color: var(--whatsapp-color);
+    }
+
+    .badge-hotline {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .badge-drops {
+      background: rgba(225, 48, 108, 0.15);
+      color: var(--instagram-color);
+    }
+
+    .channel-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .channel-meta {
+      font-size: 0.78rem;
+      color: var(--text-subtle);
+      font-weight: 600;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-actions-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 640px) {
+      .card-actions-group {
+        width: auto;
+      }
+    }
+
+    .action-btn-custom {
+      flex: 1;
+      padding: 0.72rem 1.3rem;
+      border-radius: var(--radius-md);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-wa-solid {
+      background: var(--whatsapp-color);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-wa-solid:hover {
+      background: var(--whatsapp-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-call-solid {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: var(--shadow-primary);
+    }
+
+    .btn-call-solid:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-ig-solid {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(225, 48, 108, 0.35);
+    }
+
+    .btn-ig-solid:hover {
+      opacity: 0.92;
+      transform: translateY(-2px);
+    }
+
+    .btn-copy-icon {
+      padding: 0.72rem 0.95rem;
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.86rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-copy-icon:hover {
+      background: var(--border);
+    }
+
+    /* 3. TICKET GENERATOR BOX */
+    .ticket-generator-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      margin-bottom: 2.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ticket-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.2rem;
+    }
+
+    .ticket-title {
+      font-family: var(--font-heading);
+      font-size: 1.22rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .ticket-form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+
+    @media (min-width: 640px) {
+      .ticket-form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .input-group label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .ticket-input {
+      width: 100%;
+      padding: 11px 13px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--border);
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      transition: border-color var(--transition-fast);
+    }
+
+    .ticket-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: var(--bg-surface);
+    }
+
+    /* 4. ACCORDION HELP */
+    .faq-accordion-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 2.2rem;
+    }
+
+    .accordion-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color var(--transition-fast);
+    }
+
+    .accordion-item.active {
+      border-color: var(--primary);
+    }
+
+    .accordion-btn {
+      width: 100%;
+      text-align: left;
+      padding: 14px 16px;
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-family: var(--font-heading);
+      font-size: 0.98rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .accordion-arrow {
+      font-size: 1.1rem;
+      transition: transform var(--transition-fast);
+      color: var(--text-muted);
+    }
+
+    .accordion-item.active .accordion-arrow {
+      transform: rotate(180deg);
+      color: var(--primary);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      padding-inline: 16px;
+    }
+
+    .accordion-item.active .accordion-body {
+      max-height: 250px;
+      padding-block: 12px 16px;
+    }
+
+    /* Subtle Entry Stagger on main page */
+    .fade-up-card {
+      animation: fadeUpItem 0.5s ease-out forwards;
+    }
+
+    @keyframes fadeUpItem {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
+  <!-- ==========================================================
+       CINEMATIC 2.5-SECOND HIGH-TECH INTRO SPLASH
+       ========================================================== -->
+  <div id="support-splash-screen" role="dialog" aria-label="Loading TagX Contact & Support Desk">
+    <div class="splash-cyber-grid"></div>
+
+    <button class="splash-skip-btn" onclick="finishIntroAnimation()" title="Skip Intro">
+      <span>Skip</span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
+    </button>
+
+    <div class="splash-radar-container">
+      <div class="splash-radar-pulse"></div>
+      <div class="splash-radar-ring"></div>
+      <div class="splash-logo-core">
+        <img src="assets/logo.png" alt="TagX Logo">
+      </div>
+    </div>
+
+    <div class="splash-soundwaves">
+      <div class="soundwave-bar"></div>
+      <div class="soundwave-bar"></div>
+      <div class="soundwave-bar"></div>
+      <div class="soundwave-bar"></div>
+      <div class="soundwave-bar"></div>
+      <div class="soundwave-bar"></div>
+    </div>
+
+    <div class="splash-title">Contact for Order & Queries</div>
+    <div id="splash-status-text" class="splash-status-text">🛰️ Initializing Direct Query Desk...</div>
+
+    <div class="splash-progress-track">
+      <div id="splash-progress-fill" class="splash-progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- Top Announcement Bar (Continuous Running News Ticker) -->
   <div class="announcement-bar">
-    <span>🔥 FREE Delivery on Orders Over ₹499 | Direct WhatsApp Instant Order (+91 63808 16529)</span>
+    <div class="announcement-bar-track">
+      <span>🔥 FREE Delivery on Orders Over ₹499 • Direct WhatsApp Instant Order (+91 63808 16529) • 100% Streetwear Quality • Fast All-India Shipping</span>
+      <span>🔥 FREE Delivery on Orders Over ₹499 • Direct WhatsApp Instant Order (+91 63808 16529) • 100% Streetwear Quality • Fast All-India Shipping</span>
+    </div>
   </div>
 
   <!-- Header Navigation -->
   <header class="header-wrapper">
     <div class="container navbar">
-      <button class="icon-btn" onclick="toggleMobileDrawer()" title="Menu">
-        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-      </button>
-
+      <!-- Brand Logo -->
       <a href="index.html" class="nav-brand">
         <img src="assets/logo.png" alt="TagX Logo" class="brand-logo">
       </a>
 
-      <nav class="nav-menu">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="collections.html" class="nav-link">Collections</a>
-        <a href="how-to-order.html" class="nav-link">How To Order</a>
-        <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="support.html" class="nav-link active">Support</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="whatsapp-groups.html" class="nav-link" style="color: var(--whatsapp-color);">💬 VIP Groups</a>
-      </nav>
-
+      <!-- Desktop Action Links -->
       <div class="nav-actions">
-        <button class="icon-btn" onclick="toggleSearchModal()" title="Search Products">
-          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        </button>
-
-        <a href="wishlist.html" class="icon-btn" title="Wishlist">
-          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-          <span class="icon-badge wishlist-badge" style="display: none;">0</span>
+        <a href="https://wa.me/916380816529?text=Hi%20TagX!%20I%20have%20an%20order%20inquiry." target="_blank" class="btn btn-whatsapp btn-sm" style="font-size: 0.84rem; padding: 0.45rem 1rem;">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-0.999 3.648 3.742-.981z"/></svg>
+          <span>WhatsApp Chat</span>
         </a>
 
-        <a href="cart.html" class="icon-btn" title="Cart">
-          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-          <span class="icon-badge cart-badge" style="display: none;">0</span>
+        <a href="https://www.instagram.com/tagx_fashion?igsi=bWE5MnVlbHd3dTdl" target="_blank" class="btn btn-outline btn-sm" style="font-size: 0.84rem; padding: 0.45rem 1rem; border-color: var(--instagram-color); color: var(--instagram-color);">
+          <span>Instagram DM</span>
         </a>
 
-        <button class="icon-btn theme-toggle-btn" onclick="toggleTheme()"></button>
+        <button class="icon-btn theme-toggle-btn" onclick="toggleTheme()" title="Toggle Theme"></button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
-  <div id="mobile-drawer-overlay" class="mobile-drawer-overlay" onclick="toggleMobileDrawer()"></div>
-  <aside id="mobile-drawer" class="mobile-drawer">
-    <div class="drawer-header">
-      <img src="assets/logo.png" alt="TagX Logo" style="height: 36px;">
-      <button onclick="toggleMobileDrawer()" style="font-size: 1.5rem;">&times;</button>
-    </div>
-    <nav class="drawer-menu">
-      <a href="index.html" class="drawer-link">Home</a>
-      <a href="collections.html" class="drawer-link">Collections</a>
-      <a href="support.html" class="drawer-link active">Support</a>
-      <a href="contact.html" class="drawer-link">Contact</a>
-    </nav>
-  </aside>
-
   <!-- Support Page Main Content -->
-  <main class="container section-padding" style="max-width: 800px;">
+  <main class="container" style="max-width: 860px; padding-block: 1.5rem 3rem;">
 
-    <div class="text-center" style="margin-bottom: 3rem;">
-      <span style="color: var(--primary); font-weight: 800; text-transform: uppercase;">24/7 Assistance</span>
-      <h1 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; margin-top: 4px;">TagX Customer Support</h1>
-      <p style="color: var(--text-muted); font-size: 1.05rem;">Need help with your order, tracking, or size exchange? Connect with us directly!</p>
-    </div>
+    <!-- 1. Hero Live Status Section -->
+    <section class="support-hero fade-up-card">
+      <div class="live-status-pill">
+        <span class="live-status-dot"></span>
+        <span>24/7 Live Order & Query Desk</span>
+      </div>
+      <h1 class="support-hero-title">Contact for Order & Other Queries</h1>
+      <p class="support-hero-subtitle">
+        Direct assistance for order booking, live tracking, size exchange, payment confirmation, and all other queries. Avg response time: <strong>&lt; 3 minutes</strong>.
+      </p>
+    </section>
 
-    <!-- Action Buttons Grid -->
-    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <!-- 2. One-Tap Quick Action Topic Chips -->
+    <section class="quick-chips-section fade-up-card">
+      <div class="chips-label">
+        <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <span>Instant WhatsApp Quick Topics</span>
+      </div>
+      <div class="quick-chips-scroll">
+        <a href="https://wa.me/916380816529?text=Hi%20TagX!%20I%20want%20to%20track%20my%20Order.%20My%20Order%20ID/Phone:%20" target="_blank" class="topic-chip">
+          <span>📦 Track My Order</span>
+        </a>
+        <a href="https://wa.me/916380816529?text=Hi%20TagX!%20I%20need%20a%20Size%20Exchange%20for%20my%20order.%20Item%20Details:%20" target="_blank" class="topic-chip">
+          <span>🔄 Size Exchange</span>
+        </a>
+        <a href="https://wa.me/916380816529?text=Hi%20TagX!%20I%20want%20to%20confirm%20my%20UPI%20Payment.%20Payment%20Screenshot/UTR:%20" target="_blank" class="topic-chip">
+          <span>💳 Payment Confirmation</span>
+        </a>
+        <a href="https://wa.me/916380816529?text=Hi%20TagX!%20Please%20share%20the%20latest%20VIP%20drop%20catalogue%20and%20offers." target="_blank" class="topic-chip">
+          <span>🔥 Today's VIP Drops</span>
+        </a>
+        <a href="https://wa.me/916380816529?text=Hi%20TagX!%20I%20would%20like%20to%20speak%20with%20a%20human%20support%20agent." target="_blank" class="topic-chip">
+          <span>⚡ Talk to Human Agent</span>
+        </a>
+      </div>
+    </section>
 
-      <a href="https://wa.me/916380816529" target="_blank" style="background: var(--bg-card); border: 2px solid var(--whatsapp-color); padding: 1.8rem; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; transition: transform var(--transition-fast);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <div style="font-size: 2.5rem;">💬</div>
+    <!-- 3. Primary Support Channels List -->
+    <section class="support-channels-grid">
+
+      <!-- Channel 1: WhatsApp Support (Primary) -->
+      <div class="support-card card-whatsapp fade-up-card">
+        <div class="card-left-info">
+          <div class="channel-icon-box" style="background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.3);">
+            💬
+          </div>
           <div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-main);">WhatsApp Support</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted);">Instant responses on +91 63808 16529 for order confirmation & tracking.</p>
+            <div class="channel-title-row">
+              <h2 class="channel-title">WhatsApp Priority Support</h2>
+              <span class="channel-badge badge-fast">⚡ Instant &lt; 3m</span>
+            </div>
+            <p class="channel-desc">
+              Direct 1-on-1 chat for instant order dispatch, size assistance, custom queries, and UPI verification.
+            </p>
+            <div class="channel-meta">
+              <span>🟢 3 Support Executives Online</span> • <span>+91 63808 16529</span>
+            </div>
           </div>
         </div>
-        <span class="btn btn-whatsapp">Chat Now &rarr;</span>
-      </a>
+        <div class="card-actions-group">
+          <a href="https://wa.me/916380816529?text=Hi%20TagX%20Fashion!%20I%20need%20assistance%20with%20my%20order." target="_blank" class="action-btn-custom btn-wa-solid">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-0.999 3.648 3.742-.981z"/></svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
 
-      <a href="tel:+916380816529" style="background: var(--bg-card); border: 2px solid var(--primary); padding: 1.8rem; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; transition: transform var(--transition-fast);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <div style="font-size: 2.5rem;">📞</div>
+      <!-- Channel 2: Direct Call Hotline -->
+      <div class="support-card card-phone fade-up-card">
+        <div class="card-left-info">
+          <div class="channel-icon-box" style="background: var(--primary-light); border-color: rgba(229, 9, 20, 0.3);">
+            📞
+          </div>
           <div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-main);">Call Us Directly</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted);">Available Monday to Saturday (9:00 AM - 9:00 PM IST).</p>
+            <div class="channel-title-row">
+              <h2 class="channel-title">Direct Calling Hotline</h2>
+              <span class="channel-badge badge-hotline">Voice Support</span>
+            </div>
+            <p class="channel-desc">
+              Speak directly with our fashion concierge team for immediate order resolution and guidance.
+            </p>
+            <div class="channel-meta">
+              <span>🕒 Mon – Sat (9:00 AM – 9:00 PM IST)</span>
+            </div>
           </div>
         </div>
-        <span class="btn btn-primary">Call +91 63808 16529</span>
-      </a>
+        <div class="card-actions-group">
+          <a href="tel:+916380816529" class="action-btn-custom btn-call-solid">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+            <span>Call Now</span>
+          </a>
+          <button class="btn-copy-icon" onclick="copyHotline('+916380816529')" title="Copy Phone Number">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+      </div>
 
-      <a href="https://www.instagram.com/tagx_fashion?igsi=bWE5MnVlbHd3dTdl" target="_blank" style="background: var(--bg-card); border: 2px solid var(--instagram-color); padding: 1.8rem; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; transition: transform var(--transition-fast);">
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <div style="font-size: 2.5rem;">📸</div>
+      <!-- Channel 3: Instagram VIP DM -->
+      <div class="support-card card-instagram fade-up-card">
+        <div class="card-left-info">
+          <div class="channel-icon-box" style="background: rgba(225, 48, 108, 0.1); border-color: rgba(225, 48, 108, 0.3);">
+            📸
+          </div>
           <div>
-            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-main);">Instagram DM</h3>
-            <p style="font-size: 0.88rem; color: var(--text-muted);">Send us a DM on @tagx_fashion for quick fashion advice & drops.</p>
+            <div class="channel-title-row">
+              <h2 class="channel-title">Instagram VIP DM</h2>
+              <span class="channel-badge badge-drops">@tagx_fashion</span>
+            </div>
+            <p class="channel-desc">
+              Get outfit styling recommendations, size poll advice, reel product tags, and early drop previews.
+            </p>
+            <div class="channel-meta">
+              <span>🌟 100% Streetwear Community Desk</span>
+            </div>
           </div>
         </div>
-        <span class="btn btn-outline" style="border-color: var(--instagram-color); color: var(--instagram-color);">Open DM &rarr;</span>
-      </a>
+        <div class="card-actions-group">
+          <a href="https://www.instagram.com/tagx_fashion?igsi=bWE5MnVlbHd3dTdl" target="_blank" class="action-btn-custom btn-ig-solid">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Open Instagram DM</span>
+          </a>
+        </div>
+      </div>
 
-    </div>
+      <!-- Channel 4: Email & Formal Desk -->
+      <div class="support-card card-email fade-up-card">
+        <div class="card-left-info">
+          <div class="channel-icon-box">
+            ✉️
+          </div>
+          <div>
+            <div class="channel-title-row">
+              <h2 class="channel-title">Official Email Desk</h2>
+              <span class="channel-badge" style="background: var(--bg-subtle); color: var(--text-muted);">24h Turnaround</span>
+            </div>
+            <p class="channel-desc">
+              For bulk brand partnerships, vendor queries, or formal order receipts: <strong>tagxfashion@gmail.com</strong>
+            </p>
+          </div>
+        </div>
+        <div class="card-actions-group">
+          <a href="mailto:tagxfashion@gmail.com?subject=TagX%20Order%20Inquiry" class="action-btn-custom btn-outline" style="border-color: var(--border);">
+            <span>Send Email</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 4. Interactive Quick WhatsApp Ticket Builder -->
+    <section id="ticket-section" class="ticket-generator-card fade-up-card">
+      <div class="ticket-header">
+        <div style="font-size: 1.8rem;">🚀</div>
+        <div>
+          <h3 class="ticket-title">Generate Instant WhatsApp Ticket</h3>
+          <p style="font-size: 0.86rem; color: var(--text-muted);">Select your issue below for a pre-formatted high-priority WhatsApp dispatch.</p>
+        </div>
+      </div>
+
+      <div class="ticket-form-grid">
+        <div class="input-group">
+          <label for="ticket-issue-type">Select Query Category</label>
+          <select id="ticket-issue-type" class="ticket-input">
+            <option value="Order Tracking & Status">📦 Order Tracking & Status</option>
+            <option value="Size Exchange / Return Request">🔄 Size Exchange / Replacement</option>
+            <option value="UPI Payment Verification">💳 UPI Payment / Screenshot Upload</option>
+            <option value="Product Sizing & Quality Question">👕 Product Sizing / Fabric Query</option>
+            <option value="VIP WhatsApp Community Access">👑 VIP Community Access</option>
+            <option value="Other Urgent Inquiry">⚡ Other Urgent Inquiry</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="ticket-order-id">Order ID / Registered Phone No (Optional)</label>
+          <input type="text" id="ticket-order-id" class="ticket-input" placeholder="e.g. TGX-9281 or 9876543210">
+        </div>
+      </div>
+
+      <div class="input-group" style="margin-top: 1rem;">
+        <label for="ticket-notes">Additional Message / Note (Optional)</label>
+        <textarea id="ticket-notes" class="ticket-input" rows="2" placeholder="Describe briefly what you need help with..."></textarea>
+      </div>
+
+      <button onclick="dispatchWhatsAppTicket()" class="btn btn-whatsapp btn-full" style="margin-top: 1.2rem; font-size: 1rem; padding: 0.9rem;">
+        <span>Send Priority Ticket to WhatsApp &rarr;</span>
+      </button>
+    </section>
+
+    <!-- 5. Interactive FAQ Quick Accordion -->
+    <section class="fade-up-card">
+      <div style="text-align: center; margin-bottom: 1.2rem;">
+        <span style="color: var(--primary); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Quick Answers</span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800;">Frequently Asked Questions</h3>
+      </div>
+
+      <div class="faq-accordion-group">
+        <div class="accordion-item active">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            <span>How do I track my dispatched order?</span>
+            <span class="accordion-arrow">&darr;</span>
+          </button>
+          <div class="accordion-body">
+            Once your order is confirmed via WhatsApp, our team sends a live courier tracking link (Shiprocket/BlueDart/Delhivery/India Post) within 24 hours. You can also message us your Order ID on WhatsApp anytime for instant status.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            <span>What is your size exchange policy?</span>
+            <span class="accordion-arrow">&darr;</span>
+          </button>
+          <div class="accordion-body">
+            We offer hassle-free size exchanges within 3 days of delivery! Simply send a WhatsApp message with your unboxing video or photo and request your preferred size.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            <span>How do UPI payments and order confirmations work?</span>
+            <span class="accordion-arrow">&darr;</span>
+          </button>
+          <div class="accordion-body">
+            After connecting on WhatsApp (+91 63808 16529), our team verifies stock and shares our official GPay / PhonePe / Paytm UPI QR. Once you share the payment screenshot, your order is locked and dispatched!
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            <span>Can I replay the high-tech intro animation?</span>
+            <span class="accordion-arrow">&darr;</span>
+          </button>
+          <div class="accordion-body">
+            Yes! Click the "Replay Intro Animation" button below anytime to experience the TagX 24/7 Desk intro sequence again.
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 1rem;">
+        <button onclick="replayIntroAnimation()" class="btn btn-outline btn-sm" style="border-radius: var(--radius-full); font-size: 0.82rem; gap: 6px;">
+          <span>⚡ Replay Desk Intro Animation</span>
+        </button>
+      </div>
+    </section>
 
   </main>
 
+  <!-- Mobile Bottom Sticky Action Bar -->
+  <nav class="mobile-bottom-nav">
+    <a href="https://wa.me/916380816529?text=Hi%20TagX!%20I%20have%20an%20order%20inquiry." target="_blank" class="bottom-nav-item active" style="color: var(--whatsapp-color);">
+      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-0.999 3.648 3.742-.981z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="tel:+916380816529" class="bottom-nav-item" style="color: var(--primary);">
+      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+      <span>Call Desk</span>
+    </a>
+    <a href="https://www.instagram.com/tagx_fashion?igsi=bWE5MnVlbHd3dTdl" target="_blank" class="bottom-nav-item" style="color: var(--instagram-color);">
+      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <span>Instagram</span>
+    </a>
+    <a href="#ticket-section" class="bottom-nav-item">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/></svg>
+      <span>Ticket</span>
+    </a>
+  </nav>
+
+  <!-- Footer -->
+  <footer style="background: var(--bg-surface); border-top: 1px solid var(--border); padding-top: 2.5rem; padding-bottom: 2rem;">
+    <div class="container" style="max-width: 860px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.2rem;">
+      <img src="assets/logo.png" alt="TagX Logo" style="height: 38px;">
+      <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 500px; line-height: 1.5;">
+        TagX Fashion - Direct Instagram Showcase & WhatsApp Ordering Desk. 100% Streetwear Vibes.
+      </p>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; font-weight: 700; font-size: 0.9rem;">
+        <a href="https://wa.me/916380816529" target="_blank" style="color: var(--whatsapp-color);">💬 WhatsApp: +91 63808 16529</a>
+        <a href="https://www.instagram.com/tagx_fashion?igsi=bWE5MnVlbHd3dTdl" target="_blank" style="color: var(--instagram-color);">📸 @tagx_fashion</a>
+        <a href="mailto:tagxfashion@gmail.com" style="color: var(--primary);">📧 tagxfashion@gmail.com</a>
+      </div>
+
+      <div style="margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-subtle); width: 100%;">
+        © 2026 TagX Fashion (@tagx_fashion). All Rights Reserved. Contact for Order & Other Queries.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="js/data.js"></script>
   <script src="js/theme.js"></script>
-  <script src="js/wishlist.js"></script>
-  <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    // ==========================================================
+    // 1. INTRO ANIMATION CONTROLLER (2.5 SECONDS CINEMATIC)
+    // ==========================================================
+    let splashTimer = null;
+    let progressInterval = null;
+
+    function startIntroAnimation() {
+      const splash = document.getElementById('support-splash-screen');
+      const progressFill = document.getElementById('splash-progress-fill');
+      const statusText = document.getElementById('splash-status-text');
+
+      if (!splash || !progressFill || !statusText) return;
+
+      splash.classList.remove('hidden');
+      progressFill.style.width = '0%';
+
+      const totalDuration = 2500; // 2.5 seconds
+      const startTime = performance.now();
+
+      if (progressInterval) clearInterval(progressInterval);
+      if (splashTimer) clearTimeout(splashTimer);
+
+      progressInterval = setInterval(() => {
+        const elapsed = performance.now() - startTime;
+        const progress = Math.min((elapsed / totalDuration) * 100, 100);
+        progressFill.style.width = `${progress}%`;
+
+        if (progress < 35) {
+          statusText.textContent = '🛰️ Initializing Direct Query Desk...';
+        } else if (progress < 75) {
+          statusText.textContent = '⚡ Connecting to Instant WhatsApp Dispatch...';
+        } else {
+          statusText.textContent = '🟢 Query Desk Online & Ready!';
+        }
+
+        if (progress >= 100) {
+          clearInterval(progressInterval);
+        }
+      }, 30);
+
+      splashTimer = setTimeout(() => {
+        finishIntroAnimation();
+      }, totalDuration);
+    }
+
+    function finishIntroAnimation() {
+      if (progressInterval) clearInterval(progressInterval);
+      if (splashTimer) clearTimeout(splashTimer);
+
+      const splash = document.getElementById('support-splash-screen');
+      if (splash) {
+        splash.classList.add('hidden');
+      }
+    }
+
+    function replayIntroAnimation() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      startIntroAnimation();
+    }
+
+    // Run animation on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      startIntroAnimation();
+    });
+
+    // ==========================================================
+    // 2. TICKET GENERATOR & WHATSAPP DISPATCH
+    // ==========================================================
+    function dispatchWhatsAppTicket() {
+      const issueType = document.getElementById('ticket-issue-type').value;
+      const orderId = document.getElementById('ticket-order-id').value.trim();
+      const notes = document.getElementById('ticket-notes').value.trim();
+
+      let message = `*🔥 TAGX PRIORITY ORDER & QUERY TICKET*%0A`;
+      message += `--------------------------------%0A`;
+      message += `*Category:* ${encodeURIComponent(issueType)}%0A`;
+      if (orderId) {
+        message += `*Order/Phone:* ${encodeURIComponent(orderId)}%0A`;
+      }
+      if (notes) {
+        message += `*Details:* ${encodeURIComponent(notes)}%0A`;
+      }
+      message += `--------------------------------%0A`;
+      message += `_Sent via TagX Website Order & Query Desk_`;
+
+      const whatsappUrl = `https://wa.me/916380816529?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // ==========================================================
+    // 3. COPY HOTLINE
+    // ==========================================================
+    function copyHotline(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('📞 Phone number copied: ' + text, 'success');
+        }).catch(() => {
+          showToast('📞 Phone number: ' + text, 'info');
+        });
+      } else {
+        showToast('📞 Phone number: ' + text, 'info');
+      }
+    }
+
+    // ==========================================================
+    // 4. ACCORDION TOGGLE
+    // ==========================================================
+    function toggleAccordion(btn) {
+      const item = btn.parentElement;
+      const isActive = item.classList.contains('active');
+
+      document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+  </script>
 </body>
 </html>
